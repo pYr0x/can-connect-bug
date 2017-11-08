@@ -14,5 +14,9 @@ Component.extend({
   tag: "x-first",
   ViewModel: ViewModel,
   view: stache("Foo is: {{foo}}"),
-  events: {}
+  events: {
+    "inserted": function () {
+      // this.viewModel.set("foobar","bamb");
+    }
+  }
 });

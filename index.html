@@ -8,9 +8,9 @@
 
     <div type='text/stache' can-autorender>
         <x-main>
-            <x-first vm:bar:from="scope.vars.foo"></x-first>
+            <x-first vm:too:from="scope.vars.foo"></x-first>
             <br>
-            <x-second vm:foo:to="scope.vars.foo"></x-second>
+            <x-second vm:bar:to="scope.vars.foo"></x-second>
             <br>
             Reference: {{scope.vars.foo}}
         </x-main>
@@ -19,9 +19,9 @@
     <br>
 
     <div type='text/stache' can-autorender>
-        <x-first vm:bar:from="scope.vars.foo"></x-first>
+        <x-first vm:foo:from="scope.vars.foo"></x-first>
         <br>
-        <x-second vm:foo:to="scope.vars.foo"></x-second>
+        <x-second vm:bar:to="scope.vars.foo"></x-second>
         <br>
         Reference: {{scope.vars.foo}}
     </div>
