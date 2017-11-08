@@ -8,22 +8,12 @@
 
     <div type='text/stache' can-autorender>
         <x-main>
-            <x-first vm:too:from="scope.vars.foo"></x-first>
+            <x-first vm:fooBar:from="scope.vars.foo"></x-first>
             <br>
-            <x-second vm:bar:to="scope.vars.foo"></x-second>
+            <x-second vm:barFoo:to="scope.vars.foo"></x-second>
             <br>
             Reference: {{scope.vars.foo}}
         </x-main>
-    </div>
-
-    <br>
-
-    <div type='text/stache' can-autorender>
-        <x-first vm:foo:from="scope.vars.foo"></x-first>
-        <br>
-        <x-second vm:bar:to="scope.vars.foo"></x-second>
-        <br>
-        Reference: {{scope.vars.foo}}
     </div>
 
     <br>

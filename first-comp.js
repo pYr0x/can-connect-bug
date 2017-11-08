@@ -4,7 +4,7 @@ import DefineMap from "can-define/map/";
 import stache from "can-stache";
 
 const ViewModel = DefineMap.extend({
-  foo: {
+  fooBar: {
     type: "string",
     value: "foo"
   }
@@ -13,10 +13,6 @@ const ViewModel = DefineMap.extend({
 Component.extend({
   tag: "x-first",
   ViewModel: ViewModel,
-  view: stache("Foo is: {{foo}}"),
-  events: {
-    "inserted": function () {
-      // this.viewModel.set("foobar","bamb");
-    }
-  }
+  view: stache("Foo is: {{fooBar}}"),
+  events: {}
 });
