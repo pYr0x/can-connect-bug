@@ -1,9 +1,10 @@
-const Con = require("connection");
+import "can-view-autorender";
+import "main-comp";
+import "first-comp";
+import "second-comp";
 
-Con.get({}).then(function (resp) {
+import stache from "can-stache";
 
-});
+var template = stache('<x-main><x-first vm:bar:from="scope.vars.foo"></x-first><br><x-second vm:foo:to="scope.vars.foo"></x-second><br>Reference: {{scope.vars.foo}}</x-main>');
 
-Con.getList({}).then(function (resp) {
-
-});
+document.querySelector("#append").appendChild(template({}));

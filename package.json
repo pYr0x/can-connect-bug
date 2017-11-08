@@ -9,9 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "can-connect": "^1.5.10",
+    "can-component": "^3.3.6",
     "can-define": "^1.5.4",
-    "can-set": "^1.3.3",
-    "steal": "^1.5.15"
+    "can-stache-bindings": "^3.11.1",
+    "can-view-autorender": "^3.1.2",
+    "steal": "^1.5.15",
+    "steal-stache": "^3.1.3"
+  },
+  "steal": {
+    "plugins": [
+      "steal-stache"
+    ]
   }
 }

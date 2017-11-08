@@ -6,7 +6,31 @@
 </head>
 <body>
 
-<script src="node_modules/steal/steal.js"></script>
+    <div type='text/stache' can-autorender>
+        <x-main>
+            <x-first vm:bar:from="scope.vars.foo"></x-first>
+            <br>
+            <x-second vm:foo:to="scope.vars.foo"></x-second>
+            <br>
+            Reference: {{scope.vars.foo}}
+        </x-main>
+    </div>
+
+    <br>
+
+    <div type='text/stache' can-autorender>
+        <x-first vm:bar:from="scope.vars.foo"></x-first>
+        <br>
+        <x-second vm:foo:to="scope.vars.foo"></x-second>
+        <br>
+        Reference: {{scope.vars.foo}}
+    </div>
+
+    <br>
+
+    <div id="append"></div>
+
+    <script src="node_modules/steal/steal.js"></script>
 
 </body>
 </html>
